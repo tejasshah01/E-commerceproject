@@ -89,7 +89,7 @@
 								<ul class="main-nav nav navbar-nav">
 									<li><a href="{%url 'index' %}">Home</a></li>
 									<li><a href="{%url 'About' %}">About Us</a></li>
-									<li class="active"><a href="">Shop</a></li>
+									<li ><a href="{%url 'category' %}">Shop</a></li>
 									<li><a href="{%url 'contact' %}">Contact Us</a></li>
 								</ul>
 								<!-- /NAV -->
@@ -153,14 +153,7 @@
 
 
 								</div>
-							</div>
 								<!-- /container -->
-								<form action="{%url 'search' %}" method="GET">
-									<input style="margin: 2% 0 0 0;padding: 4px 9px;border-radius: 9px;" type="search" name="search" id="'id"  placeholder="search">
-									<input style="border-radius: 7px;padding: 4px 5px;" type="submit" value="Submit">
-								</form>
-							
-								
 					</nav>
 
 
@@ -185,37 +178,26 @@
 
 			<!-- filter -->
 
-			<div class="col-lg-3 mx-auto">
-				<div class="list-group">
-
-					<a href="{% url 'category' %}"
-						class="list-group-item list-group-item-action btn btn-outline-success">All Products</a>
-
-					{% for category in category_items %}
-					<a href="{% url 'category'%}?category={{category.id}}"
-						class="list-group-item list-group-item-action btn btn-outline-success ">{{category.Category}}</a>
-					{% endfor %}
-				</div>
-
-			</div>
+			
 
 			<!-- all products -->
-			<div class="row" id="Product">
+			<div class="row" >
 
 				<!-- product -->
-				{% for product in collections %}
+				{% for i in search %}
 				<div class="col-md-4 col-xs-6" style="width: 24%;">
-
+                    
 					<div class="product">
+                       
 
-						<div class="product-img " id="{{product.id}}">
-							<img src="/media/{{product.Image}}" class="img-fluid" style="height: 300px;width: 200px;"
+						<div class="product-img " id="{{i.id}}">
+							<img src="/media/{{i.Image}}" class="img-fluid" style="height: 300px;width: 200px;"
 								alt="product image">
 						</div>
 						<div class="product-body">
-							<p class="product-category">{{product.Brand}}</p>
-							<h3 class="product-name"><a href="#">{{product.Item_name}}</a></h3>
-							<h4 class="product-price">Rs {{product.Price}}</h4>
+							<p class="product-category">{{i.Brand}}</p>
+							<h3 class="product-name"><a href="#">{{i.Item_name}}</a></h3>
+							<h4 class="product-price">Rs {{i.Price}}</h4>
 							<div class="product-rating">
 								<i class="fa fa-star"></i>
 								<i class="fa fa-star"></i>
@@ -237,20 +219,23 @@
 						      
 						<div class="add-to-cart">
 							<form action="{% url 'cart' %}" method="post">{% csrf_token %}
-								<button type="submit" name="id" value="{{product.id}}">Add to cart</button>
+								<button type="submit" name="id" value="{{i.id}}">Add to cart</button>
 							</form>
 						
 
 						</div>
+                        
 
 
 
 					</div>
+                  
 
 
 
 				</div>
-			{% endfor %}
+                {% endfor %}
+		
 
 			</div>
 		</div>

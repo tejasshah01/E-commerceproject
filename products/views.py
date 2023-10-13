@@ -83,5 +83,13 @@ def delete_item(request):
         return redirect('cart')
     
 
+def Search(request):
+    search=request.GET.get('search')
+    searchs=products.objects.filter(Brand__icontains = search)
+    print(f"\n\n\n\n\n\n\n\n\n\n{searchs}\n\n\n\n\n\n\n\n")
+    return render(request,'search.html',context={'search':searchs})
+
+    
+
 
 

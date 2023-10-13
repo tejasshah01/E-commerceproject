@@ -50,6 +50,7 @@
 					<li><a href=""><i class="fa fa-envelope-o"></i> email@email.com</a></li>
 					<li><a href=""><i class="fa fa-map-marker"></i> vadodara</a></li>
 				</ul>
+
 				<ul class="header-links pull-right">
 					<li><a href=""><i class="fa fa-user-o"></i> My Account</a></li>
 					<li><a href="{% url 'login' %}"><i class="fa fa-user-o"></i> Login</a></li>
@@ -72,7 +73,7 @@
 								<img style="max-width: 150px;" src='{%static "image/logo5.png"%}'>
 							</a>
 						</div>
-                    </div>
+					</div>
 
 					<!-- /LOGO -->
 					<!-- NAVIGATION -->
@@ -87,9 +88,10 @@
 									<li><a href="{%url 'About' %}">About Us</a></li>
 									<li><a href="{%url 'category' %}">Shop</a></li>
 									<li><a href="{%url 'contact' %}">Contact Us</a></li>
-									
+			
 								</ul>
 								<!-- /NAV -->
+								
 							</div>
 							<!-- /responsive-nav -->
 							<!-- ACCOUNT -->
@@ -110,15 +112,21 @@
 										<a href="{% url 'cart' %}">
 											<i class="fa fa-shopping-cart"></i>
 											<span>Your Cart</span>
-											
-											
-									
+
+
+
 										</a>
+									</div>
+
 									<!-- /Cart -->
-
-
+								
 								</div>
-								<!-- /container -->
+							</div>
+							<!-- /container -->
+							<form action="{%url 'search' %}" method="GET">
+								<input style="margin: 2% 0 0 0;padding: 4px 9px;border-radius: 9px;" type="search" name="search" id="'id"  placeholder="search">
+								<input style="border-radius: 7px;padding: 4px 5px;" type="submit" value="Submit">
+							</form>
 					</nav>
 
 
@@ -183,7 +191,7 @@
 						<!-- <h3 class="title">New Products</h3> -->
 						<div class="section-nav">
 							<ul class="section-tab-nav tab-nav">
-								
+
 							</ul>
 						</div>
 					</div>
@@ -194,14 +202,14 @@
 				<div class="col-md-12">
 					<!-- <div class="row">
 						<div class="products-tabs"> -->
-							
-							<!-- tab -->
-				
-							<!-- <div id="tab1" class="tab-pane active">
+
+					<!-- tab -->
+
+					<!-- <div id="tab1" class="tab-pane active">
 								<div class="products-slick" data-nav="#slick-nav-1">
 									<!-- product -->
-								   
-									<!-- <div class="product">
+
+					<!-- <div class="product">
 										<div class="product-img">
 											<img src="/media/{{product.Image}}" alt="">
 											<div class="product-label">
@@ -221,7 +229,7 @@
 												<i class="fa fa-star"></i>
 												<i class="fa fa-star"></i>
 												<i class="fa fa-star"></i> -->
-											<!-- </div>
+					<!-- </div>
 											<div class="product-btns">
 												<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span
 														class="tooltipp">add to wishlist</span></button>
@@ -237,23 +245,23 @@
 												cart</button>
 										</div>
 									</div>  -->
-									<!-- /product -->
+					<!-- /product -->
 
-									<!-- product -->
-									
-									<!-- /product -->
-								</div>
-								<div id="slick-nav-1" class="products-slick-nav"></div>
-							</div>
-							<!-- /tab -->
-						</div>
-					</div>
+					<!-- product -->
+
+					<!-- /product -->
 				</div>
-				<!-- Products tab & slick -->
+				<div id="slick-nav-1" class="products-slick-nav"></div>
 			</div>
-			<!-- /row -->
+			<!-- /tab -->
 		</div>
-		<!-- /container -->
+	</div>
+	</div>
+	<!-- Products tab & slick -->
+	</div>
+	<!-- /row -->
+	</div>
+	<!-- /container -->
 	</div>
 	<!-- /SECTION -->
 
@@ -337,32 +345,33 @@
 									<div class="product">
 										<div class="product-img">
 											<img src="{% static '/image/Apple_iPhone_14_Pro.png' %}" alt="">
-											
+
 										</div>
 										<div class="product-body">
 											<p class="product-category">Apple</p>
 											<h3 class="product-name"><a href="">iphone 14 pro</a></h3>
 											<h4 class="product-price">Rs 80000.00
-													
-											<div class="product-rating">
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-											</div>
-											<div class="product-btns">
-												<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span
-														class="tooltipp">add to wishlist</span></button>
-												<button class="add-to-compare"><i class="fa fa-exchange"></i><span
-														class="tooltipp">add to compare</span></button>
-												<button class="quick-view"><i class="fa fa-eye"></i><span
-														class="tooltipp">quick view</span></button>
-											</div>
-									    </div>
+
+												<div class="product-rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</div>
+												<div class="product-btns">
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span
+															class="tooltipp">add to wishlist</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span
+															class="tooltipp">add to compare</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span
+															class="tooltipp">quick view</span></button>
+												</div>
+										</div>
 										<div class="add-to-cart">
-											<a href="{% url 'category' %}?category=1{{category_item.1}}"><button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to
-												cart</button></a>
+											<a href="{% url 'category' %}?category=1{{category_item.1}}"><button
+													class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to
+													cart</button></a>
 										</div>
 									</div>
 									<!-- /product -->
@@ -371,31 +380,32 @@
 									<div class="product">
 										<div class="product-img">
 											<img src="{% static 'image/3D_tv.png' %}" alt="">
-											
+
 										</div>
 										<div class="product-body">
 											<p class="product-category">Sony</p>
 											<h3 class="product-name"><a href="#">3D tv 55 Inch</a></h3>
 											<h4 class="product-price">Rs 90000.00
-											<div class="product-rating">
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star-o"></i>
-											</div>
-											<div class="product-btns">
-												<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span
-														class="tooltipp">add to wishlist</span></button>
-												<button class="add-to-compare"><i class="fa fa-exchange"></i><span
-														class="tooltipp">add to compare</span></button>
-												<button class="quick-view"><i class="fa fa-eye"></i><span
-														class="tooltipp">quick view</span></button>
-											</div>
+												<div class="product-rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-o"></i>
+												</div>
+												<div class="product-btns">
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span
+															class="tooltipp">add to wishlist</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span
+															class="tooltipp">add to compare</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span
+															class="tooltipp">quick view</span></button>
+												</div>
 										</div>
 										<div class="add-to-cart">
-											<a href="{% url 'category' %}?category=2{{category_item.1}}"><button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to
-												cart</button></a>
+											<a href="{% url 'category' %}?category=2{{category_item.1}}"><button
+													class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to
+													cart</button></a>
 										</div>
 									</div>
 									<!-- /product -->
@@ -404,26 +414,27 @@
 									<div class="product">
 										<div class="product-img">
 											<img src="{% static 'image/50M62PA-1_T1680316147.jpg' %}" alt="">
-											
+
 										</div>
 										<div class="product-body">
 											<p class="product-category">HP</p>
 											<h3 class="product-name"><a href="#">ENVY i7 12 Generations</a></h3>
-											<h4 class="product-price">Rs 150000.00 
-											<div class="product-rating">
-											</div>
-											<div class="product-btns">
-												<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span
-														class="tooltipp">add to wishlist</span></button>
-												<button class="add-to-compare"><i class="fa fa-exchange"></i><span
-														class="tooltipp">add to compare</span></button>
-												<button class="quick-view"><i class="fa fa-eye"></i><span
-														class="tooltipp">quick view</span></button>
-											</div>
+											<h4 class="product-price">Rs 150000.00
+												<div class="product-rating">
+												</div>
+												<div class="product-btns">
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span
+															class="tooltipp">add to wishlist</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span
+															class="tooltipp">add to compare</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span
+															class="tooltipp">quick view</span></button>
+												</div>
 										</div>
 										<div class="add-to-cart">
-											<a href="{% url 'category' %}?category=4{{category_item.1}}"><button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to
-												cart</button></a>
+											<a href="{% url 'category' %}?category=4{{category_item.1}}"><button
+													class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to
+													cart</button></a>
 										</div>
 									</div>
 									<!-- /product -->
@@ -435,27 +446,29 @@
 										</div>
 										<div class="product-body">
 											<p class="product-category">LG</p>
-											<h3 class="product-name"><a href="#">635 L Side by side Refrigerator</a></h3>
-											<h4 class="product-price">Rs 68000.00 
-											<div class="product-rating">
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-											</div>
-											<div class="product-btns">
-												<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span
-														class="tooltipp">add to wishlist</span></button>
-												<button class="add-to-compare"><i class="fa fa-exchange"></i><span
-														class="tooltipp">add to compare</span></button>
-												<button class="quick-view"><i class="fa fa-eye"></i><span
-														class="tooltipp">quick view</span></button>
-											</div>
+											<h3 class="product-name"><a href="#">635 L Side by side Refrigerator</a>
+											</h3>
+											<h4 class="product-price">Rs 68000.00
+												<div class="product-rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</div>
+												<div class="product-btns">
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span
+															class="tooltipp">add to wishlist</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span
+															class="tooltipp">add to compare</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span
+															class="tooltipp">quick view</span></button>
+												</div>
 										</div>
 										<div class="add-to-cart">
-											<a href="{% url 'category' %}?category=10{{category_item.1}}"><button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to
-												cart</button></a>
+											<a href="{% url 'category' %}?category=10{{category_item.1}}"><button
+													class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to
+													cart</button></a>
 										</div>
 									</div>
 									<!-- /product -->
@@ -468,27 +481,28 @@
 										<div class="product-body">
 											<p class="product-category">Google</p>
 											<h3 class="product-name"><a href="#">pixel &A</a></h3>
-											<h4 class="product-price">Rs 40000.00 
-													
-											<div class="product-rating">
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-											</div>
-											<div class="product-btns">
-												<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span
-														class="tooltipp">add to wishlist</span></button>
-												<button class="add-to-compare"><i class="fa fa-exchange"></i><span
-														class="tooltipp">add to compare</span></button>
-												<button class="quick-view"><i class="fa fa-eye"></i><span
-														class="tooltipp">quick view</span></button>
-											</div>
+											<h4 class="product-price">Rs 40000.00
+
+												<div class="product-rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</div>
+												<div class="product-btns">
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span
+															class="tooltipp">add to wishlist</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span
+															class="tooltipp">add to compare</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span
+															class="tooltipp">quick view</span></button>
+												</div>
 										</div>
 										<div class="add-to-cart">
-											<a href="{% url 'category' %}?category=1{{category_item.1}}"><button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to
-												cart</button></a>
+											<a href="{% url 'category' %}?category=1{{category_item.1}}"><button
+													class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to
+													cart</button></a>
 										</div>
 									</div>
 									<!-- /product -->
@@ -513,18 +527,18 @@
 		<div class="container">
 			<!-- row -->
 			<div class="row">
-				
 
-					
 
-				
-					</div>
-				</div>
+
+
 
 			</div>
-			<!-- /row -->
 		</div>
-		<!-- /container -->
+
+	</div>
+	<!-- /row -->
+	</div>
+	<!-- /container -->
 	</div>
 	<!-- /SECTION -->
 

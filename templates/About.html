@@ -30,236 +30,315 @@
 	<link type="text/css" rel="stylesheet" href='{% static "css/Style1.css" %}'>
 	<link type="text/css" rel="stylesheet" href='{% static "css/style2.css" %}'>
 
- 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
- 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
- 		<!--[if lt IE 9]>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
  		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
  		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
  		<![endif]-->
 
-    </head>
-	<body>
-		<!-- HEADER -->
-		<header>
-			<!-- TOP HEADER -->
-			<div id="top-header">
-				<div class="container">
-					<ul class="header-links pull-left">
-						<li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
-						<li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
-						<li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
-					</ul>
-					<ul class="header-links pull-right">
-						<li><a href=""><i class="fa fa-user-o"></i> My Account</a></li>
+</head>
+
+<body>
+	<!-- HEADER -->
+	<header>
+		<!-- TOP HEADER -->
+		<div id="top-header">
+			<div class="container">
+				<ul class="header-links pull-left">
+					<li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
+					<li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
+					<li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
+				</ul>
+				<ul class="header-links pull-right">
+					<li><a href=""><i class="fa fa-user-o"></i> My Account</a></li>
 					<li><a href="{% url 'login' %}"><i class="fa fa-user-o"></i> Login</a></li>
 					<li><a href="{% url 'logout' %}"><i class="fa fa-user-o"></i> Logout</a></li>
-					</ul>
-				</div>
+				</ul>
 			</div>
-			<!-- /TOP HEADER -->
+		</div>
+		<!-- /TOP HEADER -->
 
-			<!-- MAIN HEADER -->
-			<div id="header">
-				<!-- container -->
-				<div class="container" style="width: 100%";
-				>
-					<!-- row -->
-					<div class="row">
-						<!-- LOGO -->
-						<div class="col-md-3">
-							<div class="header-logo">
-								<a href="#" class="logo">
-									<img style="max-width: 150px;" src='{%static "image/logo5.png" %}' alt="">
-								</a>
-							</div>
+		<!-- MAIN HEADER -->
+		<div id="header">
+			<!-- container -->
+			<div class="container" style="width: 100%" ;>
+				<!-- row -->
+				<div class="row">
+					<!-- LOGO -->
+					<div class="col-md-3">
+						<div class="header-logo">
+							<a href="#" class="logo">
+								<img style="max-width: 150px;" src='{%static "image/logo5.png" %}' alt="">
+							</a>
 						</div>
-						<!-- /LOGO -->
-<!-- NAVIGATION -->
-<nav id="navigation">
-    <!-- container -->
-    <div class="container">
-        <!-- responsive-nav -->
-        <div id="responsive-nav">
-            <!-- NAV -->
-            <ul class="main-nav nav navbar-nav">
-                <li ><a href="{%url 'index' %}">Home</a></li>
-                <li class="active"><a href="">About Us</a></li>
-                <li><a href="{%url 'category' %}">Shop</a></li>
-                <li><a href="{%url 'contact' %}">Contact Us</a></li>
-            </ul>
-            <!-- /NAV -->
-        </div>
-        <!-- /responsive-nav -->
-                                                 	<!-- ACCOUNT -->
-						<div class="col-md-3 clearfix">
-							<div class="header-ctn">
-								<!-- Wishlist -->
-								<div>
-									<!-- <a href="#">
+					</div>
+					<!-- /LOGO -->
+					<!-- NAVIGATION -->
+					<nav id="navigation">
+						<!-- container -->
+						<div class="container">
+							<!-- responsive-nav -->
+							<div id="responsive-nav">
+								<!-- NAV -->
+								<ul class="main-nav nav navbar-nav">
+									<li><a href="{%url 'index' %}">Home</a></li>
+									<li class="active"><a href="">About Us</a></li>
+									<li><a href="{%url 'category' %}">Shop</a></li>
+									<li><a href="{%url 'contact' %}">Contact Us</a></li>
+								</ul>
+								<!-- /NAV -->
+							</div>
+							<!-- /responsive-nav -->
+							<!-- ACCOUNT -->
+							<div class="col-md-3 clearfix">
+								<div class="header-ctn">
+									<!-- Wishlist -->
+									<div>
+										<!-- <a href="#">
 										<i class="fa fa-heart-o"></i>
 										<span>Your Wishlist</span>
 										<div class="qty">2</div>
 									</a> -->
-								</div>
-								<!-- /Wishlist -->
+									</div>
+									<!-- /Wishlist -->
 
-								<!-- Cart -->
-								<div class="dropdown">
-									<a href="{% url 'cart' %}">
-										<i class="fa fa-shopping-cart"></i>
-										<span>Your Cart</span>
-										
-										
-								
-									</a>
-								<!-- /Cart -->
+									<!-- Cart -->
+									<div class="dropdown">
+										<a href="{% url 'cart' %}">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Your Cart</span>
 
 
-    </div>
-    <!-- /container -->
-</nav>                      
-                              
 
-						
-								<!-- Menu Toogle -->
-							
-								<!-- /Menu Toogle -->
+										</a>
+									</div>
+										<!-- /Cart -->
+								</div>	
 							</div>
-						</div>
-						<!-- /ACCOUNT -->
-					</div>
-					<!-- row -->
-				</div>
-				<!-- container -->
-			</div>
-			<!-- /MAIN HEADER -->
-		</header>
+									<!-- /container -->
+									<form action="{%url 'search' %}" method="GET">
+										<input style="margin: 2% 0 0 0;padding: 4px 9px;border-radius: 9px;" type="search" name="search" id="'id"  placeholder="search">
+										<input style="border-radius: 7px;padding: 4px 5px;" type="submit" value="Submit">
+									</form>
+									
+					</nav>
 
-		<!-- BREADCRUMB -->
-		<div id="breadcrumb" class="section">
-			<!-- container -->
-			<div class="container">
-				<!-- row -->
-				</div>
-				<!-- /row -->
-			</div>
-			<!-- /container -->
-		</div>
-		<div  style="background-color: #d10024;" class="brand_color">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="titlepage">
-							<h2>About Us</h2>
-						</div>
-					</div>
+
+
+					<!-- Menu Toogle -->
+
+					<!-- /Menu Toogle -->
 				</div>
 			</div>
-	
+			<!-- /ACCOUNT -->
 		</div>
-	
-	
-	<div class="about">
-	   <div class="container">
-		  <div class="row">
-			 <dir class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-				<div class="about_box">
-				   <figure><img src="{%static 'image/store-with-credit-card-gift-boxes-buyers-illustration_1262-18980.png'%}"/></figure>
-				</div>
-			 </dir>
-			  <dir class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-				<div class="about_box">
-				   <h3>Techmart</h3>
-				   <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum.</p>
-				   <p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-				</div>
-			 </dir> 
-		  </div>
-	   </div>
+		<!-- row -->
+		</div>
+		<!-- container -->
+		</div>
+		<!-- /MAIN HEADER -->
+	</header>
+
+	<!-- BREADCRUMB -->
+	<div id="breadcrumb" class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+		</div>
+		<!-- /row -->
 	</div>
-	
-	
-		  <!-- service --> 
-		  <div class="service">
-			 <div class="container">
-				<div class="row">
-				   <div class="col-md-8 offset-md-2">
-					  <div  class="title">
-						 <h2  style="text-align: center;color:#d10024;">service <strong class="black">proces</strong></h2>
-						 <span>Easy and effective way to get your device repaired.</span>
-					  </div>
-				   </div>
+	<!-- /container -->
+	</div>
+	<div style="background-color: #d10024;" class="brand_color">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="titlepage">
+						<h2>About Us</h2>
+					</div>
 				</div>
-				<div class="row">
-				   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-					  <div class="service-box">
-						 <i><img src="{%static 'image/service1.1.png'%}"/></i>
-						 <h3>Fast service</h3>
-						 <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-					  </div>
-				   </div>
-				   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-					  <div class="service-box">
-						 <i><img src="{%static 'image/service2.2.png'%}"/></i>
-						 <h3>Secure payments</h3>
-						 <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-					  </div>
-				   </div>
-				   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-					  <div class="service-box">
-						 <i><img src="{% static 'image/service3.png' %}"/></i>
-						 <h3>Expert team</h3>
-						 <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-					  </div>
-				   </div>
-				   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-					  <div class="service-box">
-						 <i><img src="{% static 'image/service4.png' %}"/></i>
-						 <h3>Affordable services</h3>
-						 <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-					  </div>
-				   </div>
-				   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-					  <div class="service-box">
-						 <i><img src="{% static 'image/service5.png' %}"/></i>
-						 <h3>90 Days warranty</h3>
-						 <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-					  </div>
-				   </div>
-				   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-					  <div class="service-box">
-						 <i><img src="{%static 'image/service6.png' %}"/></i>
-						 <h3>Award winning</h3>
-						 <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-					  </div>
-				   </div>
-				</div>
-			 </div>
-		  </div>
-		<!-- /SECTION -->
+			</div>
+		</div>
 
-		<!-- NEWSLETTER -->
-		<div id="newsletter" class="section">
+	</div>
+
+
+	<div class="about">
+		<div class="container">
+			<div class="row">
+				<dir class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+					<div class="about_box">
+						<figure><img
+								src="{%static 'image/store-with-credit-card-gift-boxes-buyers-illustration_1262-18980.png'%}" />
+						</figure>
+					</div>
+				</dir>
+				<dir class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+					<div class="about_box">
+						<h3>Techmart</h3>
+						<p>It has survived not only five centuries, but also the leap into electronic typesetting,
+							remaining essentially unchanged. It was popularised in the 1960s with the release of
+							Letraset sheets containing Lorem Ipsum.</p>
+						<p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+							of type and scrambled it to make a type specimen book.</p>
+					</div>
+				</dir>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- service -->
+	<div class="service">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 offset-md-2">
+					<div class="title">
+						<h2 style="text-align: center;color:#d10024;">service <strong class="black">proces</strong></h2>
+						<span>Easy and effective way to get your device repaired.</span>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+					<div class="service-box">
+						<i><img src="{%static 'image/service1.1.png'%}" /></i>
+						<h3>Fast service</h3>
+						<p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
+					</div>
+				</div>
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+					<div class="service-box">
+						<i><img src="{%static 'image/service2.2.png'%}" /></i>
+						<h3>Secure payments</h3>
+						<p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
+					</div>
+				</div>
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+					<div class="service-box">
+						<i><img src="{% static 'image/service3.png' %}" /></i>
+						<h3>Expert team</h3>
+						<p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
+					</div>
+				</div>
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+					<div class="service-box">
+						<i><img src="{% static 'image/service4.png' %}" /></i>
+						<h3>Affordable services</h3>
+						<p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
+					</div>
+				</div>
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+					<div class="service-box">
+						<i><img src="{% static 'image/service5.png' %}" /></i>
+						<h3>90 Days warranty</h3>
+						<p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
+					</div>
+				</div>
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+					<div class="service-box">
+						<i><img src="{%static 'image/service6.png' %}" /></i>
+						<h3>Award winning</h3>
+						<p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /SECTION -->
+
+	<!-- NEWSLETTER -->
+	<div id="newsletter" class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="newsletter">
+
+						<ul class="newsletter-follow">
+							<li>
+								<a href="#"><i class="fa fa-facebook"></i></a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-instagram"></i></a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-pinterest"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /NEWSLETTER -->
+
+	<!-- FOOTER -->
+	<footer id="footer">
+		<!-- top footer -->
+		<div class="section">
 			<!-- container -->
 			<div class="container">
 				<!-- row -->
 				<div class="row">
-					<div class="col-md-12">
-						<div class="newsletter">
-							
-							<ul class="newsletter-follow">
-								<li>
-									<a href="#"><i class="fa fa-facebook"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="fa fa-instagram"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="fa fa-pinterest"></i></a>
-								</li>
+					<div class="col-md-3 col-xs-6">
+						<div class="footer">
+							<h3 class="footer-title">About Us</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+								incididunt ut.</p>
+							<ul class="footer-links">
+								<li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
+								<li><a href="#"><i class="fa fa-phone"></i>+021-95-51-84</a></li>
+								<li><a href="#"><i class="fa fa-envelope-o"></i>email@email.com</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-xs-6">
+						<div class="footer">
+							<h3 class="footer-title">Categories</h3>
+							<ul class="footer-links">
+								<li><a href="#">Hot deals</a></li>
+								<li><a href="#">Laptops</a></li>
+								<li><a href="#">Smartphones</a></li>
+								<li><a href="#">Cameras</a></li>
+								<li><a href="#">Accessories</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="clearfix visible-xs"></div>
+
+					<div class="col-md-3 col-xs-6">
+						<div class="footer">
+							<h3 class="footer-title">Information</h3>
+							<ul class="footer-links">
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Contact Us</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Orders and Returns</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-xs-6">
+						<div class="footer">
+							<h3 class="footer-title">Service</h3>
+							<ul class="footer-links">
+								<li><a href="#">My Account</a></li>
+								<li><a href="#">View Cart</a></li>
+								<li><a href="#">Wishlist</a></li>
+								<li><a href="#">Track My Order</a></li>
+								<li><a href="#">Help</a></li>
 							</ul>
 						</div>
 					</div>
@@ -268,88 +347,22 @@
 			</div>
 			<!-- /container -->
 		</div>
-		<!-- /NEWSLETTER -->
+		<!-- /top footer -->
 
-		<!-- FOOTER -->
-		<footer id="footer">
-			<!-- top footer -->
-			<div class="section">
-				<!-- container -->
-				<div class="container">
-					<!-- row -->
-					<div class="row">
-						<div class="col-md-3 col-xs-6">
-							<div class="footer">
-								<h3 class="footer-title">About Us</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
-								<ul class="footer-links">
-									<li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
-									<li><a href="#"><i class="fa fa-phone"></i>+021-95-51-84</a></li>
-									<li><a href="#"><i class="fa fa-envelope-o"></i>email@email.com</a></li>
-								</ul>
-							</div>
-						</div>
 
-						<div class="col-md-3 col-xs-6">
-							<div class="footer">
-								<h3 class="footer-title">Categories</h3>
-								<ul class="footer-links">
-									<li><a href="#">Hot deals</a></li>
-									<li><a href="#">Laptops</a></li>
-									<li><a href="#">Smartphones</a></li>
-									<li><a href="#">Cameras</a></li>
-									<li><a href="#">Accessories</a></li>
-								</ul>
-							</div>
-						</div>
 
-						<div class="clearfix visible-xs"></div>
 
-						<div class="col-md-3 col-xs-6">
-							<div class="footer">
-								<h3 class="footer-title">Information</h3>
-								<ul class="footer-links">
-									<li><a href="#">About Us</a></li>
-									<li><a href="#">Contact Us</a></li>
-									<li><a href="#">Privacy Policy</a></li>
-									<li><a href="#">Orders and Returns</a></li>
-									<li><a href="#">Terms & Conditions</a></li>
-								</ul>
-							</div>
-						</div>
+	</footer>
+	<!-- /FOOTER -->
 
-						<div class="col-md-3 col-xs-6">
-							<div class="footer">
-								<h3 class="footer-title">Service</h3>
-								<ul class="footer-links">
-									<li><a href="#">My Account</a></li>
-									<li><a href="#">View Cart</a></li>
-									<li><a href="#">Wishlist</a></li>
-									<li><a href="#">Track My Order</a></li>
-									<li><a href="#">Help</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<!-- /row -->
-				</div>
-				<!-- /container -->
-			</div>
-			<!-- /top footer -->
+	<!-- jQuery Plugins -->
+	<script src="{%static 'js/jquery.min.js'%}"></script>
+	<script src="{%static 'js/bootstrap.min.js'%}"></script>
+	<script src="{%static 'js/slick.min.js'%}"></script>
+	<script src="{%static 'js/nouislider.min.js'%}"></script>
+	<script src="{%static 'js/jquery.zoom.min.js'%}"></script>
+	<script src="{%static 'js/main.js'%}"></script>
 
-			
-					
-			
-		</footer>
-		<!-- /FOOTER -->
+</body>
 
-		<!-- jQuery Plugins -->
-		<script src="{%static 'js/jquery.min.js'%}"></script>
-		<script src="{%static 'js/bootstrap.min.js'%}"></script>
-		<script src="{%static 'js/slick.min.js'%}"></script>
-		<script src="{%static 'js/nouislider.min.js'%}"></script>
-		<script src="{%static 'js/jquery.zoom.min.js'%}"></script>
-		<script src="{%static 'js/main.js'%}"></script>
-
-	</body>
 </html>
